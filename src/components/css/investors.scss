@@ -1,0 +1,167 @@
+.investors {
+  .content {
+    margin: 96px 160px 0px 160px;
+    .info {
+      display: grid;
+      grid-template-columns: max-content 2fr;
+      max-width: 1120px;
+      margin: 0 auto;
+      .left-block {
+        text-align: left;
+        .name {
+          color: $gray;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 64px;
+          transition: 0.3s;
+          letter-spacing: -0.5px;
+          margin: 0;
+        }
+        .active {
+          color: $black;
+        }
+        .name:hover {
+          color: $black;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+      }
+
+      .right-block {
+        text-align: left;
+        transition: height 1s linear;
+        margin-left: 116px;
+        .smena {
+          animation: 1s infinite;
+        }
+        h3 {
+          margin: 0px 0px 48px 0px;
+          font-weight: 500;
+          font-size: 54px;
+          line-height: 64px;
+          background: $gradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          letter-spacing: -1.5px;
+        }
+        .desc {
+          text-align: left;
+          display: grid;
+          grid-template-columns: max-content auto;
+          img {
+            width: 24px;
+            height: 24px;
+            margin: 20px 20px 20px 0;
+          }
+          p {
+            text-align: left;
+            color: $black;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            margin-top: 21px;
+          }
+          hr {
+            height: 1px;
+            width: 100%;
+            margin: 0;
+            background-color: $gray-hr;
+            border: none;
+            margin: 0;
+          }
+          .hr-desctop {
+            margin-top: 20px;
+            display: block;
+          }
+          .hr-mobile {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  // media-запросы
+  @media (min-width: 1780px) {
+    .content {
+      margin: 96px auto 0px auto;
+    }
+  }
+
+  @media (max-width: 1270px) {
+    .content {
+      .info {
+        grid-column-gap: 14px;
+        .left-block {
+          text-align: left;
+          .name {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 42px;
+            letter-spacing: -0.6px;
+          }
+        }
+        .right-block {
+          .desc {
+            p {
+              font-size: 13px;
+              line-height: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .content {
+      margin: 63px 0px 0px 0px;
+      background-color: $background-gray;
+      padding: 32px 16px 70px 16px;
+      overflow: hidden;
+      .info {
+        display: block;
+        white-space: nowrap;
+        .left-block {
+          text-align: center;
+          overflow-x: scroll;
+          .name {
+            font-size: 16px;
+            line-height: 42px;
+            display: inline-block;
+            margin-right: 16px;
+          }
+        }
+
+        .right-block {
+          margin-left: 0;
+          h3 {
+            display: none;
+          }
+          .desc {
+            display: block;
+            p {
+              font-weight: 500;
+              font-size: 13px;
+              line-height: 19px;
+              white-space: normal;
+              display: inline-block;
+              margin-right: 20px;
+            }
+            img {
+              width: 16px;
+              height: 16px;
+              float: left;
+            }
+            .hr-desctop {
+              display: none;
+            }
+            .hr-mobile {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

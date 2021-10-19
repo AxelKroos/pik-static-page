@@ -1,0 +1,134 @@
+.facts {
+  margin: 0 32px;
+  .content {
+    background-color: $background-gray;
+    margin-top: 96px;
+    padding: 0px 128px 64px 128px;
+    .info {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      h2 {
+        width: fit-content;
+        float: left;
+        font-weight: 500;
+        font-size: 54px;
+        line-height: 64px;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -1.5px;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 32px;
+        text-align: left;
+        .fact {
+          h3 {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 48px;
+            color: $black;
+            margin-bottom: 0;
+          }
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: $gray;
+            margin-top: 2px;
+            height: 58px;
+          }
+          hr {
+            height: 1px;
+            width: 100%;
+            margin: 0;
+            background-color: $darken-hr;
+            border: none;
+          }
+        }
+      }
+
+      .desc {
+        margin-top: 24px;
+        text-align: left;
+        .text {
+          margin-top: 40px;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 28px;
+          color: $gray;
+          span {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  //media-запросы
+
+  @media (max-width: 1440px) {
+    .content .info .stats .fact {
+      h3 {
+        font-size: 28px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  @media (max-width: 1305px) {
+    .content .info .stats .fact p {
+      height: 84px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    margin: 0 16px;
+    .content {
+      background-color: $background;
+      margin-top: 51px;
+      padding: 0px 0px 48px 0px;
+      .info {
+        h2 {
+          font-size: 32px;
+          line-height: 38px;
+          letter-spacing: -1px;
+        }
+        .stats {
+          grid-template-columns: repeat(2, 1fr);
+          .fact {
+            h3 {
+              font-size: 20px;
+              line-height: 28px;
+            }
+            p {
+              font-size: 12px;
+              line-height: 16px;
+              height: 15px;
+            }
+          }
+        }
+        .desc .text {
+          margin-top: 12px;
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 605px) {
+    .content .info .stats .fact p {
+      height: 35px;
+    }
+  }
+
+  @media (max-width: 395px) {
+    .content .info .stats .fact p {
+      height: 47px;
+    }
+  }
+}

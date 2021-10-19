@@ -1,0 +1,135 @@
+.form-block {
+  position: relative;
+  background-image: url("./../media/background.png");
+  background-size: cover;
+  max-height: 1060px;
+  margin-top: 32px;
+  padding: 119px 320px 252px 320px;
+  box-sizing: border-box;
+  .content {
+    padding: 0;
+    .form {
+      max-width: 800px;
+      border-radius: 16px;
+      background-color: white;
+      padding: 84px 96px 34px 96px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      h2 {
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 500;
+        font-size: 54px;
+        line-height: 64px;
+        margin: 0;
+        letter-spacing: -1.5px;
+      }
+
+      .inputs {
+        display: grid;
+        margin-top: 69px;
+        div {
+          position: relative;
+          input {
+            border: none;
+            background-color: #f2f4f7;
+            padding: 16px;
+            margin-bottom: 28px;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: 0.3s;
+          }
+          input:hover {
+            background-color: $background-gray;
+            transition: 0.3s;
+          }
+          input:focus {
+            background-color: $background-gray;
+            outline: none;
+          }
+          input[type="text"] {
+            color: $gray-dark;
+            font-size: 16px;
+            line-height: 24px;
+          }
+          span {
+            position: absolute;
+            top: 60px;
+            left: 10px;
+            font-size: 10px;
+            color: #ff5858;
+          }
+        }
+        button:hover {
+          text-decoration: none;
+        }
+        button {
+          width: 100%;
+          padding: 21px 16px;
+          border: 1px solid $border;
+          box-sizing: border-box;
+          border-radius: 4px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 14px;
+          color: $darken-hr;
+          background: white;
+        }
+        .active {
+          background-color: $orange;
+          color: white;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+        .active:hover {
+          transition: 0.3s;
+          background-color: $orange-hover;
+        }
+        p {
+          margin: 46px auto 0 auto;
+          font-size: 11px;
+          color: $darken-hr;
+        }
+        .message {
+          color: $orange;
+          font-size: 16px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  //media-запросы
+  @media (max-width: 1280px) {
+    .content .form {
+      padding: 84px 50px 34px 50px;
+      margin-bottom: 153px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    padding: 84px 160px 34px 160px;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 0;
+    max-height: 560px;
+    background-position: center;
+    .content .form {
+      max-width: none;
+      padding: 51px 16px 48px 16px;
+      position: relative;
+      top: 560px;
+      h2 {
+        font-size: 32px;
+        line-height: 38px;
+        text-align: left;
+      }
+      .inputs {
+        margin-top: 27px;
+      }
+    }
+  }
+}

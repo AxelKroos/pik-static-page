@@ -1,0 +1,24 @@
+@import "./components/css/colors.scss";
+@import "./components/css/fonts/fonts.scss";
+@import "./components/css/greeting.scss";
+@import "./components/css/agitation.scss";
+@import "./components/css/investors.scss";
+@import "./components/css/facts.scss";
+@import "./components/css/form.scss";
+@import "./components/css/footer.scss";
+
+body {
+  background-color: $background;
+}
+
+.App {
+  text-align: center;
+  font-family: "GraphikLCG";
+  font-style: normal;
+}
+
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
