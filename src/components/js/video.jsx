@@ -6,7 +6,15 @@ export default function Video() {
   const backgroundVideo = useMediaQuery("(max-width: 1000px)");
 
   return (
-    <video autoPlay loop muted>
+    <video
+      autoplay="autoplay"
+      loop="loop"
+      muted
+      defaultMuted
+      playsinline
+      oncontextmenu="return false;"
+      preload="auto"
+    >
       <source src={backgroundVideo ? video720 : video1080} type="video/mp4" />
     </video>
   );

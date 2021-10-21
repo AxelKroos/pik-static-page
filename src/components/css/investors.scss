@@ -8,22 +8,24 @@
       margin: 0 auto;
       .left-block {
         text-align: left;
-        .name {
-          color: $gray;
-          font-weight: 600;
-          font-size: 24px;
-          line-height: 64px;
-          transition: 0.3s;
-          letter-spacing: -0.5px;
-          margin: 0;
-        }
-        .active {
-          color: $black;
-        }
-        .name:hover {
-          color: $black;
-          transition: 0.3s;
-          cursor: pointer;
+        li {
+          .name {
+            color: $gray;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 64px;
+            transition: 0.3s;
+            letter-spacing: -0.5px;
+            margin: 0;
+          }
+          .active {
+            color: $black;
+          }
+          .name:hover {
+            color: $black;
+            transition: 0.3s;
+            cursor: pointer;
+          }
         }
       }
 

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import background from "./../media/background.png";
 import Footer from "./footer";
 
 export default function Form() {
@@ -20,25 +19,22 @@ export default function Form() {
 
   const changeHandler = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
-  };
-
-  const validate = (event) => {
     if (event.target.value === "") {
       setErrors({ ...errors, [event.target.name]: false });
     } else {
       setErrors({ ...errors, [event.target.name]: true });
+    }
+
+    if (event.target.name == "email") {
+      const str = event.target.value;
+      const correct = str.length >= 6 && str.includes("@") && str.includes(".");
+      setErrors({ ...errors, [event.target.name]: correct });
     }
   };
 
   const usernameFilter = (event) => {
     if ("1234567890-+=/?!@#$%^&*()_.,".indexOf(event.key) != -1)
       event.preventDefault();
-  };
-
-  const emailFilter = (event) => {
-    const str = event.target.value;
-    const correct = str.length >= 6 && str.includes("@") && str.includes(".");
-    setErrors({ ...errors, [event.target.name]: correct });
   };
 
   const telephoneFilter = (event) => {
@@ -78,7 +74,6 @@ export default function Form() {
                 name="userName"
                 onChange={changeHandler}
                 onKeyPress={usernameFilter}
-                onBlur={validate}
                 placeholder="Фамилия, Имя и Отчество"
               />
               {errors.userName || errors.userName === "" ? null : (
@@ -91,7 +86,6 @@ export default function Form() {
                 type="text"
                 name="email"
                 onChange={changeHandler}
-                onBlur={emailFilter}
                 placeholder="E-mail"
               />
               {errors.email || errors.email === "" ? null : (
@@ -105,7 +99,6 @@ export default function Form() {
                 name="telephone"
                 onChange={changeHandler}
                 onKeyPress={telephoneFilter}
-                onBlur={validate}
                 placeholder="Номер телефона"
               />
               {errors.telephone || errors.telephone === "" ? null : (

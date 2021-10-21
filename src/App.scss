@@ -22,3 +22,10 @@ body {
   margin: 0 auto;
   padding: 0 16px;
 }
+
+ul {
+  padding: 0;
+  li {
+    list-style-type: none;
+  }
+}

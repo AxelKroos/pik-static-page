@@ -5,11 +5,11 @@ import db from "./../db.json";
 export default function Agitation() {
   const content = db.agitations.map((el, i) => {
     return (
-      <div key={i}>
+      <li key={i}>
         <img src={check} />
         <p>{el}</p>
         <hr />
-      </div>
+      </li>
     );
   });
 
@@ -29,7 +29,9 @@ export default function Agitation() {
           <h2>
             Стройте по ПИК-Стандарту <br /> в вашем городе
           </h2>
-          <div className="advantages">{content}</div>
+          <div className="advantages">
+            <ul>{content}</ul>
+          </div>
         </div>
       </div>
     </div>
