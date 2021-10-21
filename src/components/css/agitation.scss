@@ -29,29 +29,31 @@
     }
     .advantages {
       margin: 83px 96px 94px 96px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 448px));
-      grid-column-gap: 32px;
-      li {
-        text-align: left;
-        img {
-          float: left;
-          width: 24px;
-          height: 24px;
-          margin: 20px 20px 20px 0;
-        }
-        p {
-          color: $black;
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 31px;
-        }
-        hr {
-          height: 1px;
-          width: 100%;
-          margin: 0;
-          background-color: $gray-hr;
-          border: none;
+      ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 448px));
+        grid-column-gap: 32px;
+        li {
+          text-align: left;
+          img {
+            float: left;
+            width: 24px;
+            height: 24px;
+            margin: 20px 20px 20px 0;
+          }
+          p {
+            color: $black;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 31px;
+          }
+          hr {
+            height: 1px;
+            width: 100%;
+            margin: 0;
+            background-color: $gray-hr;
+            border: none;
+          }
         }
       }
     }
@@ -71,30 +73,32 @@
 
     .advantages {
       margin-top: 27px;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-column-gap: 32px;
-      div {
-        text-align: left;
-        img {
-          float: left;
-          width: 24px;
-          height: 24px;
-          margin: 20px 20px 20px 0;
-        }
-        p {
-          color: $black;
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 24px;
-          margin-top: 21px;
-        }
-        hr {
-          height: 1px;
-          width: 100%;
-          margin: 0;
-          background-color: $gray-hr;
-          border: none;
+      ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 32px;
+        li {
+          text-align: left;
+          img {
+            float: left;
+            width: 24px;
+            height: 24px;
+            margin: 20px 20px 20px 0;
+          }
+          p {
+            color: $black;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            margin-top: 21px;
+          }
+          hr {
+            height: 1px;
+            width: 100%;
+            margin: 0;
+            background-color: $gray-hr;
+            border: none;
+          }
         }
       }
     }
@@ -133,7 +137,7 @@
     .text {
       margin: -115px auto;
       transform: scale(0.6);
-      .advantages {
+      .advantages ul {
         grid-template-columns: 1fr;
       }
     }
@@ -150,7 +154,7 @@
         letter-spacing: -2px;
       }
       .advantages {
-        div {
+        ul li {
           img {
             width: 16px;
             height: 16px;

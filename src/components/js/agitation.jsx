@@ -22,7 +22,9 @@ export default function Agitation() {
         <h2>
           Стройте по ПИК-Стандарту <br /> в вашем городе
         </h2>
-        <div className="advantages">{content}</div>
+        <div className="advantages">
+          <ul>{content}</ul>
+        </div>
       </div>
       <div className="content">
         <div className="mobile-text">
